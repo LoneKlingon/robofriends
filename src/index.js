@@ -11,8 +11,10 @@ import {Container, Row, Col} from 'reactstrap';
 ReactDOM.render(
     
     <div>
-    
-      <Main />
+
+        <style>{'body { background-color: #357EDD; }'}</style>
+
+        <Main />
 
     
     </div>,

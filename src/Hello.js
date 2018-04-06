@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Hello.css';
+#import './Hello.css';
 import 'tachyons';
 
 //syntax to create a component named Hello must extend Component Class

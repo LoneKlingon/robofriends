@@ -20,12 +20,12 @@ class ACard extends Component
     
         <div> 
         
-            <Card className="grow">
-                <CardImg top width = "25%" src={this.props.robot.rImage} alt="Robo Pic" />
+            <Card className="grow ma2 shadow-1 modifyH cc pa2">
+                <CardImg top width = "25%" src={this.props.robot.id} alt="Robo Pic" />
         
-                <CardTitle> Name: {this.props.robot.rName}</CardTitle>
+                <CardTitle className= "tc ma2"> Name: {this.props.robot.name}</CardTitle>
                 
-                <CardText> {this.props.robot.email}</CardText>
+                <CardText className="tc"> {this.props.robot.email}</CardText>
         
             </Card>
       
