@@ -20,7 +20,7 @@ class ACard extends Component
     
         <div> 
         
-            <Card className="grow ma2 shadow-1 modifyH cc pa2">
+            <Card className="grow shadow-1 modifyH cc pa2 h-100 mb3" width ="10">
                 <CardImg top width = "25%" src={this.props.robot.id} alt="Robo Pic" />
         
                 <CardTitle className= "tc ma2"> Name: {this.props.robot.name}</CardTitle>
