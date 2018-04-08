@@ -8,13 +8,14 @@ import './bootstrap.min.css';
 import Main from './Main.js'
 import registerServiceWorker from './registerServiceWorker';
 import {Container, Row, Col} from 'reactstrap';
+import App from './App.js'
 ReactDOM.render(
     
     <div>
 
         <style>{'body { background-color: #357EDD; }'}</style>
 
-        <Main />
+        <App />
 
     
     </div>,
