@@ -16,7 +16,9 @@ class SearchBox extends Component
         return(
             <input type="search" placeholder="Search Robot Name..."
             
+            
             onChange = {this.props.onSearchChanged}
+            
             
             />
 

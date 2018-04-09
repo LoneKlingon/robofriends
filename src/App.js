@@ -4,8 +4,7 @@ import SearchBox from './SearchBox';
 import 'tachyons';
 import { RobotList } from './RobotList';
 import './App.css'
-
-
+import Scroll from'./Scroll'
 class App extends Component
 {
     constructor()
@@ -52,17 +51,35 @@ class App extends Component
                 return robot.name.toLowerCase().includes(this.state.searchField.toLowerCase());
             }
         )
+        if (filteredRobots.length === 0)
+        {
+            return(
+                
+                <h1 className="tc logo"> Loading...</h1>
 
-        return(
-            <div>
+            );
+
+        }
+
+        else
+        {
+            return(
+            
+                <div>
                 <h1 className="tc logo"> Super Robot Friends </h1>
-                <div className="tc mb3">
-                    <SearchBox onSearchChanged = {this.onSearchChanged} />
+                <div className="tc">
+                <SearchBox onSearchChanged = {this.onSearchChanged} />
                 </div>
                 {console.log(filteredRobots)}
+                <Scroll>
                 <Main robotList = {filteredRobots} />
+                </Scroll>
             </div>
+            
+           
         );
+        }
+       
     }
 
 }

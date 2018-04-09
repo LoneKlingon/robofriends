@@ -31,7 +31,7 @@ class Main extends Component
                  return(
                      
                      /*This line actually passes robot to ACard.js by using props*/
-                     <Col col="12" sm="6" md="4" key = {i} >
+                     <Col col="12" sm="6" md="4" key = {i} className= "mb3" >
                      
                         <ACard  robot = {robot} />   
                      </Col>
