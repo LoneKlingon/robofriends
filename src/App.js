@@ -3,6 +3,7 @@ import Main from './Main';
 import SearchBox from './SearchBox';
 import 'tachyons';
 import { RobotList } from './RobotList';
+import './App.css'
 
 
 class App extends Component
@@ -41,7 +42,7 @@ class App extends Component
 
         return(
             <div>
-                <h1 className="tc"> Robot Friends For Everyone! </h1>
+                <h1 className="tc logo"> Super Robot Friends </h1>
                 <div className="tc mb3">
                     <SearchBox onSearchChanged = {this.onSearchChanged} />
                 </div>
