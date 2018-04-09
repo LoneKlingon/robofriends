@@ -14,10 +14,23 @@ class App extends Component
 
         this.state =
         {
-            robotList : RobotList,
+            robotList : [],
             searchField : ""
             
         }
+    }
+
+    componentDidMount()
+    {
+        fetch("https://jsonplaceholder.typicode.com/users").then((response) =>
+        {
+            return response.json();
+
+        })
+        .then ((users) =>
+        {
+            this.setState({robotList: users})
+        })
     }
 
     onSearchChanged = (event) =>
