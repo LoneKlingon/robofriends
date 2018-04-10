@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, ColAuto, CardDeck } from 'reactstrap';
-import ACard from './Card';
+import ACard from '../components/Card';
 import 'seedrandom';
-import './Card.css';
 import 'tachyons'
 
 class Main extends Component

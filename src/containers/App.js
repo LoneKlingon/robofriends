@@ -1,12 +1,11 @@
 import React, { Component, PureComponent } from 'react';
 import Main from './Main';
-import SearchBox from './SearchBox';
+import SearchBox from '../components/SearchBox';
 import 'tachyons';
-import { RobotList } from './RobotList';
+import { RobotList } from '../components/RobotList';
 import './App.css'
-import Scroll from'./Scroll'
 import { Container, Row, Col, ColAuto, CardDeck } from 'reactstrap';
-import './test.css'
+import './Scroll.css'
 
 class App extends PureComponent
 {
@@ -58,7 +57,7 @@ class App extends PureComponent
         {
             return(
                 
-                <h1 className="tc logo"> Loading...</h1>
+                <h1 className="tc logo"> Results not Found...</h1>
 
             );
 

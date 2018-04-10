@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, Container, Row, Col} from 'reactstrap';
-import './Hello.css';
+import './Card.css';
 import 'tachyons';
 
 
