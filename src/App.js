@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import Main from './Main';
 import SearchBox from './SearchBox';
 import 'tachyons';
 import { RobotList } from './RobotList';
 import './App.css'
 import Scroll from'./Scroll'
-class App extends Component
+import { Container, Row, Col, ColAuto, CardDeck } from 'reactstrap';
+import './test.css'
+
+class App extends PureComponent
 {
     constructor()
     {
@@ -65,15 +68,18 @@ class App extends Component
         {
             return(
             
-                <div>
-                <h1 className="tc logo"> Super Robot Friends </h1>
+            
+            <div>
+            <div className="sticky-top nct">
+                <h1 className="tc logo" > Super Robot Friends </h1>
                 <div className="tc">
+        
                 <SearchBox onSearchChanged = {this.onSearchChanged} />
-                </div>
+        </div>
+            </div>
+               
                 {console.log(filteredRobots)}
-                <Scroll>
                 <Main robotList = {filteredRobots} />
-                </Scroll>
             </div>
             
            
