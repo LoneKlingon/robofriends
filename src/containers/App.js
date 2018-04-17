@@ -23,20 +23,42 @@ class App extends PureComponent
 
     componentDidMount()
     {
-        fetch("https://jsonplaceholder.typicode.com/users").then((response) =>
-        {
-            return response.json();
 
-        })
-        .then ((users) =>
+        const pullRobots = async() =>
         {
-            this.setState({robotList: users})
-        })
+            try
+            {
+                const resp = await fetch("https://jsonplaceholder.typicode.com/users");
+                const users = await resp.json();
+                console.log(users);
+                this.setState({robotList: users});
+            }
+            catch (error)
+            {
+                console.log(error);
+            }
+            
+
+        }
+
+        pullRobots();
+
+        // fetch("https://jsonplaceholder.typicode.com/users").then((response) =>
+        // {
+        //     return response.json();
+
+        // })
+        // .then ((users) =>
+        // {
+        //     this.setState({robotList: users});
+        //     console.log(this.robotList);
+        // })
     }
 
     onSearchChanged = (event) =>
     {
         console.log(event.target.value);
+        //takes keyboard entered value
         this.setState({searchField: event.target.value});
        
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, Container, Row, Col} from 'reactstrap';
-import './Card.css';
 import 'tachyons';
+import './Card.css';
 
 
 
@@ -20,8 +20,9 @@ class ACard extends Component
         /* Appears to require both div and card tags to have h-100 in order to display even height carsd */
 
         <div className="h-100"> 
-        
-            <Card className="grow shadow-1 modifyH cc" width ="10">
+            {/*Put the card background color css class code here or try Main.js it is very buggy*/}
+
+            <Card className="grow shadow-1 modifyH bc" width ="10">
                 <CardImg top width = "25%" src={`https://robohash.org/${Math.floor((Math.random() * 1000) + 1)}`} alt="Robo Pic" />
         
                 <CardTitle className= "tc"> Name: {this.props.robot.name}</CardTitle>
